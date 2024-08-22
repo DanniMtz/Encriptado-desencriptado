@@ -10,12 +10,17 @@ var resultado = document.querySelector(".texto-resultado");
 
 /* llamar las funciones al hacer click*/
 
-botonEncriptar.onclick = recuperarTexto;
+botonEncriptar.onclick = resultadotext;
+
+
+function resultadotext(){
+   var cajatexto = recuperarTexto()
+    resultado.textContent = cajatexto;
+    alert (`${ resultado.textContent}`)
+}
 
 
 function recuperarTexto(){
     var cajatexto = document.querySelector(".areatexto")
-    cajatexto.value
-   
-    alert (`Texto: ${cajatexto.value} `);
+    return cajatexto.value;
 }
